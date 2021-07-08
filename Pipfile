@@ -4,15 +4,16 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-black = "*"
+django-debug-toolbar = "*"
+black = "==21.6b0"
 
 [packages]
-requests = "*"
 django = "*"
 django-environ = "*"
 djangorestframework = "*"
 sentry-sdk = "*"
 gunicorn = "*"
+django-webpack-loader = "*"
 
 [requires]
 python_version = "3.8"
