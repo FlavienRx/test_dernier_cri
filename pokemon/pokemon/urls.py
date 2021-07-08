@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.conf import settings
 from django.urls import include, path
+from django.views.generic import TemplateView
 
 
 urlpatterns = [
     path("api/", include("api.urls")),
+    path("", TemplateView.as_view(template_name="index.html"), name="index"),
 ]
 
 if settings.DEBUG:
