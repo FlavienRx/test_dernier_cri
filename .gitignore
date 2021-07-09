@@ -10,7 +10,6 @@
 *.sqlite3
 *.sqlite3-journal
 *.dump
-*.json
 media/
 static/**
 
