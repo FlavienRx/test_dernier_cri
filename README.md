@@ -13,10 +13,34 @@ pipenv install
 
 Pipenv will create a virtual env.
 
-Next, go to backend directory and run the backend server:
-
+Activate the virtual env
 ```
-cd pokemon && python manage.py migrate && python manage.py runserver --settings=pokemon.dev
+pipenv shell
+```
+
+Next, go to backend directory
+```
+cd pokemon 
+```
+
+Create you database
+```
+python manage.py migrate
+```
+
+Fill the database
+```
+python manage.py pokeapi_wrapper
+```
+
+Run the backend server
+```
+python manage.py runserver --settings=pokemon.dev
+```
+
+Launch tests
+```
+python manage.py test
 ```
 
 ## Frontend
@@ -116,3 +140,12 @@ The response have to be like this:
 - [ ] Move API call from components to a JS file
 - [ ] Add more pokemon informations
 - [ ] Add database integrity tests
+
+
+# Explications
+
+Pour la partie backend, j'ai choisi d'utiliser l'API https://pokeapi.co/. Dans la documentation de `pokeapi`, il existe déjà deux wrappers python. Pour tenter d'éconoiser du temps, je les ai testés. Mais `pokebase` semble soufrire de problème de performance (c'est le cas sur ma machine) et `pokepy` a un conflit de dépendance avec la librairie `requests` qui m'aurait pris beaucoup de temps à résoudre. J'ai donc opté de faire mon wrapper de A à Z.
+
+Pour le frontend, j'ai choisi VueJS car je connais déjà cette techno et que cela m'a permis de répondre au besoin dans les temps. J'ai aussi utilisé Vue-router pour faire des URL plus user friendly et appeler mes composants Vue par les URLs.
+
+Pour plus d'explication, je me tiens à disposition.
