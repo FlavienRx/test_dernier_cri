@@ -135,11 +135,12 @@ The response have to be like this:
 - [x] Make an API endpoint
 - [x] Make tests
 - [x] Consume API endpoint by front
-- [ ] Deploy in roduction
+- [x] Deploy in production
 - [ ] Manage dev url to remove that -> `http://localhost:8000/http://127.0.0.1:8080/`
 - [ ] Move API call from components to a JS file
 - [ ] Add more pokemon informations
 - [ ] Add database integrity tests
+- [ ] Build frontend during deployement
 
 
 # Explications
