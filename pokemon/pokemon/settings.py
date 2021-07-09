@@ -134,7 +134,7 @@ STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "../frontend/dist"),
+    os.path.join(BASE_DIR, "..", "frontend", "dist"),
 ]
 
 # Default primary key field type
@@ -146,6 +146,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 WEBPACK_LOADER = {
     "DEFAULT": {
         "BUNDLE_DIR_NAME": "dist/",
-        "STATS_FILE": os.path.join(BASE_DIR, "../frontend", "webpack-stats.json"),
+        "STATS_FILE": os.path.join(BASE_DIR, "..", "frontend", "webpack-stats.json"),
     }
 }
